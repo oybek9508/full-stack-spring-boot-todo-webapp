@@ -1,9 +1,11 @@
 <html>
-<head>
-<title>Login Page</title>
-</head>
-<body>
-<div>Welcome page</div>
-<div>Your name: ${name}</div>
-</body>
+	<head>
+		<title>Login Page</title>
+	</head>
+	<body>
+		<div class = "container">
+			<h1>Welcome ${name}</h1>
+		 	<div><a href = "todos">manage</a> your todos</div>
+		</div>
+	</body>
 </html>
