@@ -23,6 +23,11 @@ public class TodoController {
 		this.todoService = todoService;
 	}
 
+	@RequestMapping("login")
+	public String logout() {
+		return "login";
+	}
+
 	@RequestMapping("todos")
 	public String fetchTodoPage(ModelMap model) {
 		List<Todo> matchingTodos = todoService.findTodosByUsername("oybek");
@@ -43,7 +48,7 @@ public class TodoController {
 		if (result.hasErrors())
 			return "todo";
 		String username = (String) model.get("name");
-		todoService.addNewTodo(username, todo.getDescription(), LocalDate.now(), false);
+		todoService.addNewTodo(username, todo.getDescription(), todo.getTargetDate(), false);
 		return "redirect:todos ";
 	}
 

@@ -11,6 +11,18 @@
 <title>Add Todo Page</title>
 </head>
 <body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light mb-3 p-1">
+			<a class="navbar-brand m-1" href="https://courses.in28minutes.com">Spring boot project</a>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/todos">Todos</a></li>
+				</ul>
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="/login">Logout</a></li>
+			</ul>	
+		</nav>
 	<div class="container">
 		<h1>Welcome ${name}</h1>
 		<form:form method="post" modelAttribute="todo">
@@ -24,7 +36,7 @@
 
 			<fieldset class="mb-3">
 				<form:label path="targetDate">Target Date</form:label>
-				<form:input type="text" path="targetDate" />
+				<form:input type="date" path="targetDate" />
 				<form:errors path="targetDate" cssClass="text-warning" />
 			</fieldset>
 

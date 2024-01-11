@@ -7,12 +7,24 @@
 		<title>Todo Page</title>
 	</head>
 	<body>
+	
+		<nav class="navbar navbar-expand-md navbar-light bg-light mb-3 p-1">
+			<a class="navbar-brand m-1" href="https://courses.in28minutes.com">Spring boot project</a>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/todos">Todos</a></li>
+				</ul>
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="/login">Logout</a></li>
+			</ul>	
+		</nav>
 		<div class = "container">
 			<h1>Your todos</h1>
 				<table class= "table">
 					<thead>
 						<tr>
-							<th>Id</th>
 							<th>Description</th>
 							<th>Target Date</th>
 							<th>Done</th>
@@ -22,8 +34,7 @@
 					</thead>
 					<tbody>
 							<c:forEach items = "${todos}" var="todo">
-							<tr>
-							<td>${todo.id}</td>
+							<tr> 
 							<td>${todo.description}</td>
 							<td>${todo.targetDate}</td>
 							<td>${todo.isDone}</td>
