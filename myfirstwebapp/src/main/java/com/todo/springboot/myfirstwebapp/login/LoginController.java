@@ -41,9 +41,4 @@ public class LoginController {
 
 	}
 
-//	@RequestMapping("/welcome")
-//	public String fetchWelcomePage(ModelMap model) {
-//		return "welcome";
-//	}
-
 }
